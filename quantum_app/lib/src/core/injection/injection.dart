@@ -1,0 +1,6 @@
+
+class Injection {
+  static initialize(){
+    
+  }  
+}
