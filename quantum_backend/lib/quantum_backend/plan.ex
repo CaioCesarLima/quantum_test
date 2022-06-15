@@ -2,13 +2,15 @@ defmodule QuantumBackend.Plan do
   use Ecto.Schema
   import Ecto.Changeset
 
+  alias QuantumBackend.Music
+
   @primary_key {:id, Ecto.UUID, autogenerate: true}
 
   schema "plans" do
     field :level, :integer
     field :limit, :integer
     field :name, :string
-
+    has_many(:music, Music)
     timestamps()
   end
 
