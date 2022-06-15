@@ -14,6 +14,7 @@ defmodule QuantumBackend do
 
   #Music's action
   defdelegate create_music(params), to: Music.Create, as: :call
+  defdelegate fetch_musics(id), to: Music.Show, as: :call
 
   #User's action
   defdelegate create_user(params), to: User.Create, as: :call
