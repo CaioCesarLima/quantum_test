@@ -1,4 +1,4 @@
-defmodule QuantumBackend.PLan.Create do
+defmodule QuantumBackend.Plan.Create do
   alias QuantumBackend.{Repo, Plan}
 
   def call(params) do
