@@ -10,5 +10,7 @@ defmodule QuantumBackend.Repo.Migrations.CreatePlans do
 
       timestamps()
     end
+
+    create unique_index(:plans, [:id])
   end
 end
