@@ -24,6 +24,8 @@ defmodule QuantumBackendWeb.Router do
     pipe_through :api
 
     get "/welcome", WelcomeController, :index
+
+    get "/musics/:id", MusicController, :show
   end
 
 
