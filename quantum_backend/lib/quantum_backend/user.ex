@@ -3,15 +3,15 @@ defmodule QuantumBackend.User do
   import Ecto.Changeset
 
   alias QuantumBackend.Plan
+  alias QuantumBackend.Music
 
-  @primary_key {:id, Ecto.UUID, autogenerate: true}
-  @foreign_key_type Ecto.UUID
 
   schema "users" do
     field :name, :string
     field :password_hash, :string
     field :email, :string
     belongs_to(:plan, Plan)
+    many_to_many :musics, Music, join_through: "users_musics", join_keys: [user_id: :id, music_id: :id]
     timestamps()
   end
 

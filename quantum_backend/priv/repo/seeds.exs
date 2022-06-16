@@ -23,4 +23,4 @@ QuantumBackend.create_music(%{name: "Winter", plan_id: basic.id})
 QuantumBackend.create_music(%{name: "Summer", plan_id: basic.id})
 QuantumBackend.create_music(%{name: "Ocariana", plan_id: gold.id})
 
-QuantumBackend.create_user(%{name: "Caio", plan_id: gold.id, password: "123456", email: "caio@gmail.com"})
+QuantumBackend.create_user(%{name: "Caio", plan_id: gold.id, password_hash: "123456", email: "caio@gmail.com"})

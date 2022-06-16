@@ -26,6 +26,13 @@ defmodule QuantumBackendWeb.Router do
     get "/welcome", WelcomeController, :index
 
     get "/musics/:id", MusicController, :show
+
+    post "/user", UserController, :create
+    post "/user/signin", UserController, :sign_in
+
+    get "/playlist/:id", MusicController, :get_playlist
+    post "/playlist", MusicController, :create
+    delete "/playlist", MusicController, :delete
   end
 
 

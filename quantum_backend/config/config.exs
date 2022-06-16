@@ -50,3 +50,7 @@ config :phoenix, :json_library, Jason
 # Import environment specific config. This must remain at the bottom
 # of this file so it overrides the configuration defined above.
 import_config "#{config_env()}.exs"
+
+config :quantum_backend, QuantumBackend.Auth.Guardian,
+       issuer: "quantum_backend",
+       secret_key: "qPXr/XJzWFL9a+Ud56mJ94/G62Ov2J0yYcHZ4HgeIgVtbIDsyCCd79VxKzfC2YRN"

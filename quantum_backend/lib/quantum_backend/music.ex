@@ -2,14 +2,13 @@ defmodule QuantumBackend.Music do
   use Ecto.Schema
   import Ecto.Changeset
 
-  alias QuantumBackend.Plan
+  alias QuantumBackend.{Plan, User}
 
-  @primary_key {:id, Ecto.UUID, autogenerate: true}
-  @foreign_key_type Ecto.UUID
 
   schema "musics" do
     field :name, :string
     belongs_to(:plan, Plan)
+    many_to_many :users, User, join_through: "users_musics"
     timestamps()
   end
 

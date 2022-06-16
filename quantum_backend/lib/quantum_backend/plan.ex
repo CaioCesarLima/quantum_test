@@ -4,7 +4,6 @@ defmodule QuantumBackend.Plan do
 
   alias QuantumBackend.Music
 
-  @primary_key {:id, Ecto.UUID, autogenerate: true}
 
   schema "plans" do
     field :level, :integer

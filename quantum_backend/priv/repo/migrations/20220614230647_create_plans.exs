@@ -2,8 +2,7 @@ defmodule QuantumBackend.Repo.Migrations.CreatePlans do
   use Ecto.Migration
 
   def change do
-    create table(:plans, primary_key: false) do
-      add :id, :uuid, primakey_key: true
+    create table(:plans) do
       add :name, :string
       add :limit, :integer
       add :level, :integer
